@@ -27,14 +27,9 @@ ccache -z # Clear old stats, so monitor script will provide real ccache statisti
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 up(){
-	curl --upload-file $LETAK https://transfer.sh/repeng-ulysse; echo
+	curl --upload-file $LETAK https://transfer.sh/repeng-ulysse.zip; echo
 	# 14 days, 10 GB limit
 }
-
-# It's recommended to use google drive(rclone) as upload solution for coping with the time limit. Un-comment next 3 lines to upload with rclone in drive. Also change apon and junk according to your config name, uploading folder of drive
-#up(){
-#	time rclone copy $1 rawrr -P # apon is my rclone config name, 
-#}
 
 tg(){
 	bot_api=1915646062:AAH1ulZ5N6mmUq4NYaUeV4zf2TvI-LRATpE # Your tg bot api, dont use my one haha, it's better to encrypt bot api too.
